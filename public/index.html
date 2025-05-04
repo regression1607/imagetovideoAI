@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Video Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Generating your video... This may take a minute</div>
+  </div>
+  
+  <header>
+    <div class="container">
+      <h1>AI Video Generator</h1>
+      <p class="tagline">Transform your images into stunning videos with the power of AI</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Create a Video
+      </div>
+      <div class="card-body">
+        <form id="videoForm" action="/imagetovideo" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="image">Upload Image</label>
+            <div class="file-input-container" id="dropArea">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop your image here or click to browse</p>
+              <p class="file-format">Supports: JPG, PNG, WEBP</p>
+              <input type="file" id="image" name="image" class="file-input" accept="image/*" required>
+              <p class="file-name" id="fileName"></p>
+            </div>
+            <div class="preview-container" id="previewContainer">
+              <img id="previewImage" class="preview-image" src="" alt="Preview">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="prompt">Describe the Video You Want to Create</label>
+            <div class="input-container">
+              <input type="text" id="prompt" name="prompt" placeholder="e.g., A serene beach with waves crashing at sunset" required>
+            </div>
+          </div>
+          
+          <button type="submit" class="generate-button">
+            <i class="fas fa-magic"></i>
+            Generate Video
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© <script>document.write(new Date().getFullYear())</script> AI Video Generator. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="/script.js"></script>
+</body>
+</html>

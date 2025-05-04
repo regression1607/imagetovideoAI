@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Generated - AI Video Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="success-header">
+    <div class="container">
+      <h1>Video Created Successfully!</h1>
+      <p class="tagline">Your AI-generated video is ready to view and download</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Your Video
+      </div>
+      <div class="card-body">
+        <i class="fas fa-check-circle success-icon"></i>
+        <p class="success-message">Video generated successfully</p>
+        
+        <div class="video-container">
+          <video controls autoplay>
+            <source src="{{VIDEO_URL}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        <div class="button-container">
+          <a href="{{VIDEO_URL}}" class="button download-button" download>
+            <i class="fas fa-download"></i>
+            Download Video
+          </a>
+          <a href="/" class="button">
+            <i class="fas fa-plus"></i>
+            Create Another Video
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© <script>document.write(new Date().getFullYear())</script> AI Video Generator. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html> 

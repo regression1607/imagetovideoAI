@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error - AI Video Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="error-header">
+    <div class="container">
+      <h1>Something Went Wrong</h1>
+    </div>
+  </header>
+  
+  <div class="container">
+    <div class="card">
+      <div class="card-header error-header">
+        Error Details
+      </div>
+      <div class="card-body">
+        <i class="fas fa-exclamation-triangle error-icon"></i>
+        <div class="error-message">
+          {{ERROR_MESSAGE}}
+        </div>
+        <div class="center">
+          <a href="/" class="button">
+            <i class="fas fa-redo"></i>
+            Try Again
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© <script>document.write(new Date().getFullYear())</script> AI Video Generator. Videos are generated based on your uploaded image and text prompt.</p>
+    </div>
+  </footer>
+</body>
+</html> 
